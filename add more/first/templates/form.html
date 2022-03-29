@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>form with AddMore button</title>
+    </head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+
+    var x = 1, i = 1;//initlal text box count
+
+
+   $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+
+		     //text box increment
+            $(wrapper).append('<div><input type="text" name="mytext[i]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            x++,i++;
+	  }
+    });
+
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+
+		e.preventDefault();
+		$(this).parent('div').remove();
+		x--;
+    })
+});
+	</script>
+	<body>
+    <form action="/save1/" method="POST">
+{% csrf_token %}
+  <div class="container">
+    <h1>Please Register </h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+       <label> <b>Name</b> </label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+<br/><br/>
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="Email" required>
+<br/><br/>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw1" required>
+<br/><br/>
+    <label><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw2" required>
+<br/><br/>
+      <label><b>Interest</b></label>
+     <div class="input_fields_wrap">
+     <div><input type="text" placeholder="Add Interests" name="mytext[i]"></div>
+    <button class="add_field_button">Add More </button>
+     </div>
+    <input type="submit" value="Register" class="registerbtn">
+  </div>
+ </form>
+</body>
+</html>

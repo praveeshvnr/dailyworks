@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>dist</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    
+      
+     .card{
+          margin-top: 5px;
+          margin-left: 5px;
+      }
+      .carousel{
+          width:100%;
+      }
+  </style>
+  <body>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+          <div class="container">
+              
+              <a href="#" class="navbar-brand">
+                  <h3 class="text-success"><img src="{% static 'images/krltag.png'%}" alt="Los Angeles" width="100px" height="40px">Kerala<span class="text-primary">Tourism</span></h3>
+              </a>
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mx-auto">
+                   <!-- <li class="nav-item">
+                        <a href="/index/" class="nav-link">Home</a>
+                    </li>-->
+                   
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Explore</a>
+                    </li>
+                   <li class="nav-item">
+                        <a href="/profile/" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/regkerala/" class="nav-link">Sign up</a>
+                  </li>
+                </ul>
+                <!--<button class="btn btn-primary me-2">Sign up</button>
+                <button class="btn btn-outline-primary me-2" style="margin-left: 3px;">Login</button>-->
+                </div>
+          </div>
+      </nav>
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+       
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+     
+      <section id="about" class="about p-4 mb-5">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 col-sm-12">
+                  <h5 class="tect-secondary"></h5>
+                  <h2>kerala</h2>
+                  <p class="lead text-info"><b>ipsum dolor sit amet consectetur, adipisicing elit.
+                       Non reiciendis ipsa dicta, laudantium voluptatum velit nesciunt obcaecati cupiditate itaque
+                        tenetur neque aperiam, quidem architecto ea possimus odio necessitatibus nostrum hic.psum dolor sit amet consectetur, adipisicing elit.
+                        Non reiciendis ipsa dicta, laudantium voluptatum velit nesciunt obcaecati cupiditate itaque
+                         tenetur neque aperiam, quidem architecto ea possimus odio necessitatibus nostrum hic
+                    
+                    </b> </p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <img src="{% static 'images/palakkad/Palakkad_Fort_5.jpg'%}" alt="" class="imgfluid rounded col-lg-10 col-sm-12">
+                    </div>
+                </div>
+                <div class="row mt-5 flex-row-reverse">
+                    <div class="col-lg-6 col-sm-12">
+                    <h5 class="tect-secondary">about</h5>
+                    <h2>welcome</h2>
+                    <p class="lead text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                         Non reiciendis ipsa dicta, laudantium voluptatum velit nesciunt obcaecati cupiditate itaque
+                          tenetur neque aperiam, quidem architecto ea possimus odio necessitatibus nostrum hic.</p>
+                      </div>
+                      <div class="col-lg-6 col-sm-12">
+                          <img src="{% static 'images/palakkad/Palakkad-815x459.jpg'%}" alt="" class="imgfluid rounded col-lg-6 col-sm-12">
+                      </div>
+                  </div>
+              
+          </div>
+      </section>
+      
+  </body>
+  </html>

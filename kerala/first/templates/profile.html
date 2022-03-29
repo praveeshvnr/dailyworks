@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+ <head> 
+  <title>Profile kerala</title> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <style>
+   #page{
+    
+   margin-left: 0px;
+    background-image: url("{% static 'images/360_F_359983118_OUEqWt9VPKM2rysrc0S9AeQ2vP1VrkZ6.jpg'%}");
+    background-size: 100%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    height: 100%;
+    padding-top: 15%;
+  
+   }
+   .a{
+     color: white;
+   }
+   .b{
+     margin-left: 5px;
+   }
+   .c{
+     margin-left: 18px;
+   }
+   .d{
+    margin-left: 45px;
+   }
+
+       
+      
+    
+  </style>
+ </head> 
+ <body style="background-color: rgb(75, 73, 73);">
+   
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container">
+        
+        <a href="#" class="navbar-brand">
+            <h3 class="text-success"><img src="{% static 'images/krltag.png' %}" alt="Los Angeles" width="100px" height="40px">Kerala<span class="text-primary">Tourism</span></h3>
+        </a>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+      <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mx-auto">
+              <!--<li class="nav-item">
+                  <a href="/index/" class="nav-link" >Home</a>
+              </li>-->
+              <li class="nav-item">
+                  <a href="/explore/" class="nav-link">Explore</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link active">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="/regkerala/" class="nav-link">Sign up</a>
+            </li>
+          </ul>
+          <!--<button class="btn btn-primary me-2">Sign up</button>
+          <button class="btn btn-outline-primary me-2" style="margin-left: 3px;">Login</button>-->
+          </div>
+    </div>
+</nav>
+<div class="container-fluid">
+  
+  <div id="page">
+   <h2 class="title" style="color: beige; margin-bottom: 30px;"><center><u>LOGIN</u></center></h2> 
+
+  <div class="total">
+  <form action="/login/" name="form1" target="_self" autocomplete="on" method="post"> 
+    {% csrf_token %}
+    <div class="row">
+      <labe class="a">User  Name :</labe>
+      <input class="b   col-md-8 col-sm-8  col-7" type="text" name="name1" placeholder="User Name" > <br>
+    </div>
+    <!--<div class="row" style="margin-top: 12px;">
+      <labe class="a">Email :</labe>
+      <input class="d   col-md-8 col-sm-8  col-7" type="email" name="t2" placeholder="Email" > <br>
+    </div>-->
+    <div class="row" style="margin-top: 12px;">
+      <labe class="a">Password :</labe>
+      <input class="c col-md-8 col-sm-8 col-7" type="password" name="password1" placeholder="Password"><br>
+      
+    </div>
+    <div class="row" style="margin-top: 6px;">
+      <a href="#">forgoten password</a><br>
+      
+    </div>
+    
+    <!--<div class="row" style="margin-top: 8px; ">
+      <input type="submit">
+    </div>-->
+    <button type="submit" class="btn-success" style="margin-top: 30px;">sign in</button>
+    
+    
+  </form> 
+</div>
+</div>
+</div>
+ </body>
+</html>

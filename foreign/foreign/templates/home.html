@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-12">
+    {%  for i in data      %}
+    <h2>name:{{i.name}}</h2>
+    <h2>price:{{i.price}}</h2>
+    <h2>catagory:{{i.catagory.catagory}}</h2>
+    <h2>cart:{{i.catagory.cart}}</h2>
+    <a class="btn btn-primary" href="/view/{{i.id_new}}">View product</a>
+    {% endfor  %}
+    </div>
+    </div>
+</body>
+</html>

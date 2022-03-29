@@ -1,0 +1,31 @@
+<html>
+    <body>
+<table border="1">
+
+    <tr><th>id</th>
+    <th>name</th>
+    <th>lastname</th>
+    <th>password</th>
+    <th>email</th>
+    <th>experienceyear</th>
+    <th>languages</th>
+    <th>delete</th>
+    <th>edit</th></tr>
+{{vars.name}}
+{% for i in vars%}
+<tr><td>{{i.id}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.lastname}}</td>
+    <td>{{i.password}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.experienceyear}}</td>
+    <td>{{i.languages}}</td>
+    <td><a href="/delete/{{i.id}}">delete</a>
+        </td>
+        <td><a href="/edit/{{i.id}}">edit</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+    </body>
+</html>

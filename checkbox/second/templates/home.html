@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Check box</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.chkvalue').click(function () {
+                    var text = "";
+                    $('.chkvalue:checked').each(function() {
+                        text += $(this).val() + ","
+                    });
+                    $('#txtvalue').val(text);
+                });
+            });
+        </script>
+    </head>
+    <body>
+    <center>
+        <h1>Checkbox</h1>
+        <hr/>
+        <h3>Hobbies</h3>
+        <form action="/savevalue/" method="POST">
+            {% csrf_token %}
+{#          {% for resultdisplay in chkbox %}#}
+            <input type="checkbox" class="chkvalue" value="playing">Playing
+            <input type="checkbox" class="chkvalue" value="Reading">Reading
+            <input type="checkbox" class="chkvalue" value="Writing">Writing
+            <input type="checkbox" class="chkvalue" value="Listening">Listening
+            <input type="checkbox" class="chkvalue" value="Watching">Watching
+            <hr/>
+            <input type="text" id="txtvalue" name="hobbies">
+            <input id="but1" type="submit" value="display Records">
+{#           {% endfor %}#}
+        </form>
+    </center>
+</body>
+</html>

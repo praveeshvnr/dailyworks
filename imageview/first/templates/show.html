@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h1>name :{{member.name}}</h1>
+        <img src="{{member.pic.url}}">
+        <form action="/save/" method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            name: <input type="text" name="name" placeholder="first_name"><br><br>
+            dob:  <input type="text" name="dob" placeholder="date of birth"><br><br>
+            <input type="submit">
+    </body>
+</html>

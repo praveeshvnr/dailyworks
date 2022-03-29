@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.chkvalue').click(function () {
+                    var text = "";
+                    $('.chkvalue:checked').each(function() {
+                        text += $(this).val() + ","
+                    });
+                    $('#txtvalue').val(text);
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+    <form action="/save/" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="first_name"><br><br>
+        <input type="text" name="dob" placeholder="last_name"><br><br>
+        <input type="text" name="passwd" placeholder="username"><br><br>
+        <input type="radio" name="email" placeholder="experience" value="yes">yes<br><br>
+        <input type="radio" name="email" placeholder="experience" value="no">no<br><br>
+        <select name="year">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <h3>Hobbies</h3>
+
+        <input type="checkbox" class="chkvalue" value="playing">Playing
+            <input type="checkbox" class="chkvalue" value="Reading">Reading
+            <input type="checkbox" class="chkvalue" value="Writing">Writing
+            <input type="checkbox" class="chkvalue" value="Listening">Listening
+            <input type="checkbox" class="chkvalue" value="Watching">Watching
+            <hr/>
+            <input type="text" id="txtvalue" name="hobbies">
+        <input type="submit">
+   
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table" border="0">
+        <tbody>
+        {% if obj %}
+            <tr>
+                <td>{{ obj.name}}</td>
+                <td>{{ obj.passwd}}</td>    
+            </tr>
+        {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>

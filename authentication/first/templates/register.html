@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="limit">
+        <div class="login-container">
+            <div class="bb-login">
+                <form action="/app/register" method="post"> 
+                  <div class="bb-form validate-form">
+                  <span class="bb-form-title p-b-26">Add students</span> <span class="bb-form-title p-b-48"> <i class="mdi mdi-symfony"></i> </span></div>
+                  {% csrf_token %} 
+                  <div class="wrap-input100 validate-input" data-validate="Enter username"> <span class="btn-show-pass"> <i class="mdi mdi-eye show_password"></i> </span> <input type="text" name="first_name" placeholder="First Name" required> <span class="bbb-input" ></span> </div>
+                  <div class="wrap-input100 validate-input" data-validate="Enter username"> <span class="btn-show-pass"> <i class="mdi mdi-eye show_password"></i> </span> <input type="text" name="last_name" placeholder="Last Name" required> <span class="bbb-input" ></span> </div>
+                  <div class="wrap-input100 validate-input" data-validate="Enter username"> <span class="btn-show-pass"> <i class="mdi mdi-eye show_password"></i> </span> <input type="text" name="username" placeholder="User Name" required> <span class="bbb-input" ></span> </div>
+                  <div class="wrap-input100 validate-input" data-validate="Enter username"> <span class="btn-show-pass"> <i class="mdi mdi-eye show_password"></i> </span> <input type="email" name="email" placeholder="Email" required> <span class="bbb-input" ></span> </div>
+                  <div class="wrap-input100 validate-input" data-validate="Enter username"> <span class="btn-show-pass"> <i class="mdi mdi-eye show_password"></i> </span> <input type="password" name="password1" placeholder="password" required> <span class="bbb-input" ></span> </div>
+                  <div class="wrap-input100 validate-input" data-validate="Enter username"> <span class="btn-show-pass"> <i class="mdi mdi-eye show_password"></i> </span> <input type="password" name="password2" placeholder="password" required> <span class="bbb-input" ></span> </div>
+                 
+                  
+                    
+                    <div class="login-container-form-btn">
+                        <div class="bb-login-form-btn">
+                            <div class="bb-form-bgbtn"></div> <button type="submit" class="bb-form-btn">Upload</button>
+                        </div>
+                    </div>
+                    <div class="text-center p-t-115"> <span class="txt1"> Already have an account? </span> <a class="txt2" href="/app/login">login here</a> </div>
+                </form>
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+              
+            </div>
+        </div>
+      </div>
+
+</body>
+</html>
